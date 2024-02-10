@@ -3,16 +3,17 @@ package com.example.quizapp;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 @Data
 @Entity
 public class Question {
 
-    @Id
+
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer id;
+    @Id
+    private Integer quizId;
     private String questionTitle;
     private String option1;
     private String option2;
@@ -20,4 +21,5 @@ public class Question {
     private String option4;
     private String rightAnswer;
     private String difficultyLevel;
+    private String category;
 }
