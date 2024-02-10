@@ -13,9 +13,6 @@ public class QuestionController {
     @Autowired
     QuestionService questionService;
     @GetMapping("allQuestions")
-//    public String getAllQuestions(){
-//        return "yes done";
-//    }
     public List<Question> getAllQuestions(){
         return questionService.getAllQuestions();
     }
