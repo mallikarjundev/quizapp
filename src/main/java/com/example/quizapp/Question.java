@@ -10,9 +10,8 @@ import lombok.Data;
 @Entity
 public class Question {
 
-
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer quizId;
     private String questionTitle;
     private String option1;
